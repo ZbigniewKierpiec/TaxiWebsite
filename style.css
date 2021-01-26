@@ -1,0 +1,1200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+}
+.wraper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.mainHeader {
+  width: 100%;
+  height: 25vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* header h1 {
+  color: white;
+} */
+.mainHeader__logo {
+  width: 25vh;
+  height: 100%;
+
+  text-align: center;
+}
+.mainHeader__logo img {
+  width: 100%;
+}
+.bar {
+  display: none;
+}
+.mainHeader__contact {
+  width: 30%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeader__mail {
+  width: 30%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeader__contact a,
+.mainHeader__mail a {
+  text-decoration: none;
+  color: white;
+}
+.mainHeader__contact,
+.mainHeader__mail {
+  font-size: 15px;
+}
+
+.fa {
+  color: rgb(145, 226, 15);
+}
+.fa-calendar {
+  color: yellow;
+}
+.mainHeader__pl {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 20px;
+  height: 20px;
+  background-image: url(/Assets/220px-Roundel_of_Poland_\(1921–1993\).svg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+}
+.mainHeader__pl2 {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+  background-image: url(/Assets/220px-Roundel_of_Poland_\(1921–1993\).svg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+}
+.contact__all {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+.contact__all p a {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.mainNav {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+
+  background-color: rgb(0, 0, 0);
+}
+.mainNav ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+}
+.mainNav ul li {
+  height: 100%;
+  color: white;
+  font-size: 15px;
+  line-height: 30px;
+  flex-grow: 1;
+  border-right: 1px solid red;
+
+  border-left: 1px solid red;
+  transition: 0.3s linear;
+  position: relative;
+}
+.mainNav ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5%;
+  background-color: red;
+  transition: 0.5s linear;
+}
+.mainNav ul li:hover::before {
+  width: 100%;
+}
+
+.mainNav ul li:hover::after {
+  width: 100%;
+}
+
+.mainNav ul li a {
+  color: white;
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mainNav ul li.active {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+.mainNav ul li.active a {
+  color: black;
+}
+
+#container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
+}
+#slider {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: 0.5s;
+}
+.slid {
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.573);
+  background-blend-mode: multiply;
+  transition: 1s;
+}
+#slid1 {
+  background-image: url(/Assets/airport.jpg);
+}
+
+#slid2 {
+  background-image: url(/Assets/executive.jpg);
+}
+#slid3 {
+  background-image: url(/Assets/wesele.jpg);
+}
+.content {
+  width: 80%;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(235, 59, 59);
+  transition: 0.5s;
+}
+.heading,
+.des {
+  overflow: hidden;
+}
+.heading {
+  height: auto;
+}
+
+h1.content {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  color: #fff;
+  line-height: 70px;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+p.content {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  line-height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+
+  background-color: gray;
+}
+.promise {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Assets/mercsrodek.png);
+  background-position-x: 40%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 10px;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.promiseTxt {
+  text-align: center;
+  display: flex;
+  flex-basis: 80%;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.promiseTxt .h2 {
+  font-size: 1.5em;
+  line-height: 3em;
+  border-bottom: 3px solid red;
+}
+
+.promiseTxt .h3 {
+  font-size: 1.5em;
+  line-height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.promiseTxt a {
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 5px;
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: white;
+  overflow: hidden;
+  box-shadow: 8px 8px 10px 3px black;
+}
+
+.animation span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #0c002b, red);
+  animation: animate1 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animation span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, red);
+  animation: animate2 2s linear infinite;
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animation span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to left, #0c002b, red);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animation span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, red);
+  animation: animate4 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* --------------sekcja cars------- */
+#Cars {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.mercedes {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.mercedes__imgBox {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.mercedes__imgBox img {
+  width: 30vw;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mercedes__content {
+  margin-top: 50px;
+}
+.mercedes__content h2 {
+  display: inline-block;
+  text-decoration-line: underline;
+  font-family: monospace;
+  font-size: 2.5em;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+.mercedes__content h4 {
+  padding: 0 20px;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 0.4em;
+  line-height: 1.7em;
+}
+.vw {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+}
+
+.vw__imgBox {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.vw__imgBox img {
+  display: block;
+  width: 30vw;
+  object-fit: contain;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vw__content {
+  margin-top: 50px;
+}
+
+.vw__content h2 {
+  display: inline-block;
+  text-decoration-line: underline;
+  font-family: monospace;
+  font-size: 2.5em;
+  font-weight: bolder;
+  padding: 20px 20px;
+}
+
+.vw__content h4 {
+  padding: 0 20px;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 0.4em;
+  line-height: 1.7em;
+}
+.vito {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+}
+
+.vito__imgBox {
+  display: block;
+  width: 50%;
+
+  height: 100%;
+  position: relative;
+}
+.vito__imgBox img {
+  display: block;
+  width: 35vw;
+  object-fit: contain;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vito__content {
+  margin-top: 50px;
+}
+
+.vito__content h2 {
+  display: inline-block;
+  text-decoration-line: underline;
+  font-family: monospace;
+  font-size: 2.5em;
+  font-weight: bolder;
+  padding: 20px 20px;
+}
+
+.vito__content h4 {
+  padding: 0 20px;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 0.4em;
+  line-height: 1.7em;
+}
+.space {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  margin: 50px 0;
+}
+.space-down {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+}
+div#social {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+}
+
+div#social #so {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+div#social .soc {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#social .soc i {
+  font-size: 1.3em;
+}
+div#social li {
+  line-height: 50px;
+}
+
+/* h3 {
+  color: white;
+  font-family: "Patua One", cursive;
+  font-size: 2em;
+}  */
+
+/* aside */
+
+aside {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+aside div.aside {
+  width: 30%;
+  height: 50%;
+
+  margin: 5px;
+}
+div.aside {
+  display: flex;
+  justify-content: center;
+}
+div.aside div {
+  text-align: left;
+}
+div.aside div i {
+  font-size: 2em;
+  color: red;
+}
+div.aside h1 {
+  font-size: 2em;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+div.aside div p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+div.aside div.fas {
+  margin-right: 20px;
+}
+
+div.timer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Assets/clouds-2517653_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+div.timer div {
+  margin: 0 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 20%;
+  height: 40%;
+  border-radius: 10%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.589);
+}
+div.timer span {
+  font-size: 3em;
+  font-family: monospace;
+}
+
+/*------------------------- stopka--------------------------------*/
+
+.card {
+  width: 100%;
+  height: 30vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  z-index: 3000;
+}
+
+.card__links {
+  width: 20%;
+  height: 100%;
+  margin-top: 0.7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.links__link {
+  list-style: none;
+  margin: 0.5em 0;
+  transition: 0.6s;
+}
+
+.links__link:hover {
+  transform: translateX(20px);
+}
+.links__link a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: white;
+  font-family: monospace;
+
+  padding: 0.6em;
+}
+.links__h2 {
+  color: white;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+.card__pay {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pay__h2 {
+  color: white;
+  font-size: 0.9em;
+  font-family: monospace;
+  margin: 20px 0;
+}
+
+.pay__sumUp {
+  width: 100%;
+  height: 30%;
+  background-image: url(/Assets/sumapp.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.pay__credit {
+  width: 100%;
+  height: 50%;
+  background-image: url(/Assets/615-6155337_all-major-credit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.card__social {
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#social__list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#social__list .list__li {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#social__list .list__li i {
+  font-size: 1.5em;
+  color: white;
+}
+
+.main-footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(37, 35, 35);
+  text-align: center;
+  line-height: 10vh;
+}
+
+.main-footer h1 {
+  color: white;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 1.3em;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+/*----------------- responsywnosc-----Mobile min 320px max width 480px-------- */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .mainNav {
+    width: 100%;
+    max-height:0;
+    overflow: hidden;
+    transition:max-height 0.2s linear;
+ 
+    background-color: rgb(0, 0, 0);
+    
+  }
+
+  .mainNav.collapsed {
+    overflow: hidden;
+    max-height:600px;
+    transition:max-height 0.6s linear;
+  } 
+
+  .bar {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 122222;
+  }
+  .bar i {
+    font-size: 30px;
+    color: darkred;
+    font-weight: bolder;
+  }
+
+  .mainNav ul {
+    width: 100%;
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainNav ul li {
+    border-bottom: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  .mainNav ul li a {
+    flex-grow: 1;
+    padding: 0.5em 0;
+    display: block;
+    font-size: 100%;
+  }
+  .mainHeader .logo {
+    background-image: url(/Assets/Bracknell\ Executive\ Travel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    width: 90%;
+  }
+  .mainHeader .contact {
+    width: 35%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainHeader .mail {
+    width: 35%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__all p a {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.8rem;
+  }
+  .mainHeader__pl2 {
+    display: none;
+  }
+  h1.content {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #fff;
+    line-height: 30px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    font-family: monospace;
+  }
+
+  .promise {
+    background-attachment: scroll;
+  }
+
+  .promiseTxt {
+    text-align: center;
+    display: flex;
+    flex-basis: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    color: whitesmoke;
+    font-family: monospace;
+  }
+
+  .promiseTxt .h2 {
+    font-size: 1em;
+  }
+
+  .promiseTxt .h3 {
+    font-size: 1.5em;
+  }
+
+  .promiseTxt a {
+    background-color: rgb(0, 0, 0);
+  }
+
+  #Cars {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .mercedes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mercedes__imgBox {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    top: 80px;
+  }
+  .mercedes__imgBox img {
+    width: 45vw;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .mercedes__content {
+    text-align: justify;
+    margin-top: 50px;
+    padding-left: 30px;
+  }
+  .mercedes__content h2 {
+    display: inline-block;
+    text-decoration-line: underline;
+    font-family: monospace;
+    font-size: 2.5em;
+    font-weight: bolder;
+    padding: 20px 0;
+  }
+  .mercedes__content h4 {
+    padding: 0 20px;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.4em;
+    line-height: 1.7em;
+  }
+  .vw {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .vw__imgBox {
+    display: block;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    top: 10vh;
+  }
+  .vw__imgBox img {
+    display: block;
+    width: 45vw;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .vw__content {
+    margin-top: 50px;
+    text-align: justify;
+    padding-left: 30px;
+  }
+
+  .vw__content h2 {
+    display: inline-block;
+    text-decoration-line: underline;
+    font-family: monospace;
+    font-size: 2.5em;
+    font-weight: bolder;
+    padding: 20px 20px;
+  }
+
+  .vw__content h4 {
+    padding: 0 20px;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.4em;
+    line-height: 1.7em;
+  }
+  .vito {
+    width: 100%;
+    height: 220vh;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .vito__imgBox {
+    display: block;
+    width: 100%;
+
+    position: relative;
+  }
+  .vito__imgBox img {
+    display: block;
+    width: 50vw;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .vito__content {
+    position: relative;
+    padding-left: 30px;
+    top: -40vh;
+  }
+
+  .vito__content h2 {
+    display: inline-block;
+    text-decoration-line: underline;
+    font-family: monospace;
+    font-size: 2.5em;
+    font-weight: bolder;
+    padding: 20px 20px;
+  }
+
+  .vito__content h4 {
+    padding: 0 20px;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.4em;
+    line-height: 1.7em;
+  }
+
+  aside {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  aside div.aside {
+    width: 100%;
+    height: 50%;
+
+    margin: 15px;
+  }
+  div.aside {
+    display: flex;
+    justify-content: center;
+  }
+  div.aside div {
+    text-align: left;
+  }
+  div.aside div i {
+    font-size: 2em;
+    color: red;
+  }
+  div.aside h1 {
+    font-size: 2em;
+    font-family: monospace;
+    margin-bottom: 10px;
+  }
+  div.aside div p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+  div.aside div.fas {
+    margin-right: 20px;
+  }
+
+  div.timer {
+    width: 100%;
+    height: 150vh;
+    background-image: url(/Assets/clouds-2517653_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.timer div {
+    margin: 10px;
+    text-align: center;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 20%;
+    color: white;
+    padding: 0 20px;
+
+    background-color: rgba(0, 0, 0, 0.589);
+  }
+  div.timer span {
+    font-size: 3em;
+    font-family: monospace;
+  }
+
+  .card {
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .card__links {
+    width: 30%;
+    height: 100%;
+    margin-top: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .links__link {
+    list-style: none;
+    margin: 1.3em 0;
+    transition: 0.6s;
+  }
+
+  .links__link:hover {
+    transform: translateX(20px);
+  }
+  .links__link a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
+    font-family: monospace;
+
+    padding: 0.6em;
+  }
+  .links__h2 {
+    color: white;
+    text-transform: uppercase;
+    font-family: monospace;
+  }
+
+  .card__pay {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .pay__h2 {
+    color: white;
+    font-size: 0.9em;
+    font-family: monospace;
+    margin: 20px 0;
+  }
+
+  .pay__sumUp {
+    width: 100%;
+    height: 30;
+    background-image: url(/Assets/sumapp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .pay__credit {
+    width: 100%;
+    height: 50%;
+    background-image: url(/Assets/615-6155337_all-major-credit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .card__social {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+  #social__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #social__list .list__li {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #social__list .list__li i {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .main-footer {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    z-index: 1000;
+  }
+
+  .main-footer h1 {
+    color: white;
+    text-align: center;
+    font-size: 0.7em;
+    line-height: 10vh;
+    z-index: 10000;
+  }
+}
